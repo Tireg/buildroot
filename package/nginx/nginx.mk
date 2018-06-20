@@ -250,6 +250,18 @@ NGINX_DEPENDENCIES += nginx-naxsi
 NGINX_CONF_OPTS += --add-module=$(NGINX_NAXSI_DIR)/naxsi_src
 endif
 
+ifeq ($(BR2_PACKAGE_NGX_DEVEL_KIT),y)
+NGINX_DEPENDENCIES += ngx-devel-kit
+NGINX_CONF_OPTS += --add-module=$(NGX_DEVEL_KIT_DIR)
+endif
+
+ifeq ($(BR2_PACKAGE_NGINX_LUA),y)
+NGINX_DEPENDENCIES += nginx-lua
+NGINX_CONF_OPTS += --add-module=$(NGINX_LUA_DIR)
+NGINX_CONF_ENV += LUAJIT_LIB="$(TARGET_DIR)/usr/lib"
+NGINX_CONF_ENV += LUAJIT_INC="$(LUAJIT_DIR)/src"
+endif
+
 # Debug logging
 NGINX_CONF_OPTS += $(if $(BR2_PACKAGE_NGINX_DEBUG),--with-debug)
 

@@ -1,0 +1,9 @@
+config BR2_PACKAGE_NGX_DEVEL_KIT
+	bool "ngx-devel-kit"
+	help
+	  Nginx Development Kit
+
+	  An Nginx module that adds additional generic tools that module developers
+	  can use in their own modules
+
+	  https://github.com/simplresty/ngx_devel_kit

@@ -1,0 +1,8 @@
+config BR2_PACKAGE_NGINX_LUA
+	bool "nginx-lua"
+	select BR2_PACKAGE_LUAJIT
+	select BR2_PACKAGE_NGX_DEVEL_KIT
+	help
+	  A module for nginx web server for handling lua syntax
+
+	  https://github.com/openresty/lua-nginx-module
