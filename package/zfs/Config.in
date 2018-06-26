@@ -1,0 +1,16 @@
+config BR2_PACKAGE_ZFS
+	bool "zfs"
+	depends on BR2_LINUX_KERNEL
+	select BR2_PACKAGE_SPL
+	select BR2_PACKAGE_ZLIB
+	select BR2_PACKAGE_ZLIB_NG
+	select BR2_PACKAGE_UTIL_LINUX
+	select BR2_PACKAGE_UTIL_LINUX_LIBUUID
+	select BR2_PACKAGE_UTIL_LINUX_LIBBLKID
+	select BR2_PACKAGE_LIBTIRPC
+	select BR2_PACKAGE_OPENSSL
+	help
+	  ZFS Filesystem
+	  OpenZFS for Linux Implementation
+
+	  https://github.com/zfsonlinux/zfs

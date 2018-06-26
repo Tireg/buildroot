@@ -1,0 +1,8 @@
+config BR2_PACKAGE_SPL
+	bool "spl"
+	depends on BR2_LINUX_KERNEL
+	help
+	  Solaris Porting Layer
+	  A shim layer which adds the core interfaces required for OpenZFS.
+
+	  https://github.com/zfsonlinux/spl
